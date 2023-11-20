@@ -31,12 +31,12 @@ export default function Home() {
             </Link>
             <Link
               className="flex max-w-xs flex-col gap-4 rounded-xl bg-[#AFA4B7]/10 p-4 text-black hover:bg-[#AFA4B7]/20"
-              href="/"
-              target="_self"
+              href="/resume.pdf"
+              target="_blank"
             >
               <h3 className="text-2xl font-bold">Resume →</h3>
               <div className="text-lg">
-                Coming soon...
+                PDF
               </div>
             </Link>
           </div>
