@@ -10,7 +10,7 @@ export default function Home() {
     <Layout>
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-4 ">
         <Image
-          src="/images/headshot.jpg"
+          src="/images/headshot.png"
           alt="headshot"
           width="500"
           height="500"
