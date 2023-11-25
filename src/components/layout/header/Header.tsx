@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="flex justify-between px-4 py-4">
       <Link
-        className="font-extrabold tracking-tight text-black sm:text-[2rem] px-4"
+        className="px-4 font-extrabold tracking-tight text-black sm:text-[2rem]"
         href="/"
         target="_self"
       >
@@ -14,8 +14,11 @@ export default function Header() {
         <Link className="font-bold" href="/resume" target="_self">
           Resume
         </Link>
-        <Link className="font-bold" href="https://www.linkedin.com/in/sarah-meyers-sm/"
-            target="_blank">
+        <Link
+          className="font-bold"
+          href="https://www.linkedin.com/in/sarah-meyers-sm/"
+          target="_blank"
+        >
           LinkedIn
         </Link>
       </div>

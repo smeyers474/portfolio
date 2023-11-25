@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 
 import Layout from "~/components/layout/Layout";
 import { api } from "~/utils/api";
@@ -9,7 +9,12 @@ export default function Home() {
   return (
     <Layout>
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-4 ">
-        <img src="./images/headshot.jpg" alt="headshot" />
+        <Image
+          src="/images/headshot.jpg"
+          alt="headshot"
+          width="500"
+          height="500"
+        />
         <p className="text-2xl text-black">
           {hello.data ? hello.data.greeting : "Loading tRPC query..."}
         </p>
