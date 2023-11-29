@@ -1,16 +1,8 @@
-import dynamic from "next/dynamic";
 import Link from "next/link";
 
 import { MdOpenInNew } from "react-icons/md";
 
 import Layout from "~/components/layout/Layout";
-
-/**
- * Critical: prevents "TypeError: url.replace is not a function" error
- */
-const Resume = dynamic(() => import("./Resume.tsx"), {
-  ssr: false,
-});
 
 export default function Page() {
   return (
@@ -25,7 +17,7 @@ export default function Page() {
             <MdOpenInNew />
           </Link>
         </div>
-        <Resume />
+        <iframe src="resume.pdf" width="100%" height="500px" />
       </div>
     </Layout>
   );
