@@ -15,7 +15,7 @@ export default function Home() {
           width="500"
           height="500"
         />
-        <p className="text-2xl text-black">
+        <p className="text-2xl font-raleway text-black">
           {hello.data ? hello.data.greeting : "Loading tRPC query..."}
         </p>
       </div>
