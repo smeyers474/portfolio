@@ -1,10 +1,7 @@
 import Layout from "~/components/layout/Layout";
 import Image from "~/components/image/Image";
-import { api } from "~/utils/api";
 
 export default function Home() {
-  const hello = api.post.hello.useQuery({ text: "from San Diego" });
-
   return (
     <Layout>
       <div
@@ -14,11 +11,12 @@ export default function Home() {
         <Image
           src="/images/headshot.jpg"
           alt="Picture of Sarah Meyers"
-          width="50vw"
-          height="80vh"
+          width="20vw"
+          height="50vh"
+          objectFit="contain"
         />
-        <p className="font-raleway text-2xl text-black">
-          {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+        <p className="font-raleway text-2xl text-[#413e66]">
+          My name is Sarah Meyers
         </p>
       </div>
     </Layout>
