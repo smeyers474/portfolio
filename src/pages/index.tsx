@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import Layout from "~/components/layout/Layout";
+import Image from "~/components/image/Image";
 import { api } from "~/utils/api";
 
 export default function Home() {
@@ -9,16 +8,14 @@ export default function Home() {
   return (
     <Layout>
       <div
-        className="container flex flex-col items-center justify-center gap-4 px-4 py-4"
+        className="container flex flex-row items-center justify-center gap-4 px-4 py-4"
         // className="container relative min-h-screen flex items-center"
       >
         <Image
-          src="/images/headshotfull.png"
+          src="/images/headshot.jpg"
           alt="Picture of Sarah Meyers"
-          width="333"
-          height="408"
-          // className="relative object-contain"
-          // fill
+          width="50vw"
+          height="80vh"
         />
         <p className="font-raleway text-2xl text-black">
           {hello.data ? hello.data.greeting : "Loading tRPC query..."}

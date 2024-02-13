@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="bg-[#ffffff]">
-      <div className="max-w-screen-2xl flex justify-between px-10 py-4">
+      <div className="max-w-screen-2xl flex justify-between px-10 py-4 mx-auto">
         <Link
           className="px-4"
           href="/"
@@ -19,11 +19,18 @@ export default function Header() {
         </Link>
         <div className="flex items-center justify-center gap-8 px-4 py-2">
           <Link
-            className="font-raleway  text-[#413e66]"
+            className="font-raleway text-[#413e66]"
             href="/resume"
             target="_self"
           >
             Resume
+          </Link>
+          <Link
+            className="font-raleway text-[#413e66]"
+            href="/photography"
+            target="_self"
+          >
+            Photography
           </Link>
           <Link
             className="font-raleway text-[#413e66]"
