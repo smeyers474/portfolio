@@ -4,12 +4,8 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="bg-[#ffffff]">
-      <div className="max-w-screen-2xl flex justify-between px-10 py-4 mx-auto">
-        <Link
-          className="px-4"
-          href="/"
-          target="_self"
-        >
+      <div className="mx-auto flex max-w-screen-2xl justify-between px-10 py-4">
+        <Link className="px-4" href="/" target="_self">
           <Image
             src="/images/sm-high-resolution-logo-transparent.png"
             alt="Sarah Meyers Logo"

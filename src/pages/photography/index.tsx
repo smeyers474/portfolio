@@ -1,13 +1,13 @@
 import Layout from "~/components/layout/Layout";
 import Image from "~/components/image/Image";
 
-const photoWidth = "37.5rem"
-const photoHeight = "25rem"
+const photoWidth = "37.5rem";
+const photoHeight = "25rem";
 
 export default function Page() {
   return (
     <Layout>
-      <section className="p-4 grid gap-4 grid-cols-1 xl:grid-cols-2 gap-4 auto-rows-[photoHeight]">
+      <section className="grid auto-rows-[photoHeight] grid-cols-1 gap-4 gap-4 p-4 xl:grid-cols-2">
         <Image
           src="/images/plant.jpg"
           alt="Picture of a plant"
