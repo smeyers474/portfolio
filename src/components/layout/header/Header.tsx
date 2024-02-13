@@ -1,30 +1,38 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="flex justify-between bg-[#ffffff] px-4 py-4">
-      <Link
-        className="px-4 font-raleway tracking-tight text-[#928ce5] sm:text-[2rem]"
-        href="/"
-        target="_self"
-      >
-        Sarah Meyers
-      </Link>
-      <div className="flex items-center justify-center gap-8 px-4 py-2">
+    <header className="bg-[#ffffff]">
+      <div className="max-w-screen-2xl flex justify-between px-10 py-4">
         <Link
-          className="font-raleway  text-[#413e66]"
-          href="/resume"
+          className="px-4"
+          href="/"
           target="_self"
         >
-          Resume
+          <Image
+            src="/images/sm-high-resolution-logo-transparent.png"
+            alt="Sarah Meyers Logo"
+            width={50}
+            height={50}
+          />
         </Link>
-        <Link
-          className="font-raleway text-[#413e66]"
-          href="https://www.linkedin.com/in/sarah-meyers-sm/"
-          target="_blank"
-        >
-          LinkedIn
-        </Link>
+        <div className="flex items-center justify-center gap-8 px-4 py-2">
+          <Link
+            className="font-raleway  text-[#413e66]"
+            href="/resume"
+            target="_self"
+          >
+            Resume
+          </Link>
+          <Link
+            className="font-raleway text-[#413e66]"
+            href="https://www.linkedin.com/in/sarah-meyers-sm/"
+            target="_blank"
+          >
+            LinkedIn
+          </Link>
+        </div>
       </div>
     </header>
   );
