@@ -16,6 +16,13 @@ export default function Header() {
         <div className="flex items-center justify-center gap-8 px-4 py-2">
           <Link
             className="font-raleway text-[#413e66]"
+            href="/about"
+            target="_self"
+          >
+            About
+          </Link>
+          <Link
+            className="font-raleway text-[#413e66]"
             href="/resume"
             target="_self"
           >
