@@ -3,20 +3,17 @@ import Layout from "~/components/layout/Layout";
 export default function Home() {
   return (
     <Layout>
-      <section
-        className="container flex flex-row items-center justify-center gap-4 px-4 py-4"
-        // className="container relative min-h-screen flex items-center"
-      >
-        <div className="w-[10rem] font-raleway text-lg text-[#413e66]">
-          {/* add cubes for each section? */}
-          <h1 className="pb-4 text-2xl">
-            Hi, I&apos;m Sarah a full-stack developer.
-          </h1>
-          <p>
-            Contact me:{" "}
-            <a href="mailto: sarmey47@gmail.com">sarmey47@gmail.com</a>
+      <section className="my-10 flex min-h-[20rem] flex-col items-center justify-center bg-white p-10">
+        <h1 className="w-[60%] pb-4 font-raleway text-2xl text-[#413e66]">
+          Hi, I&apos;m Sarah, a full-stack developer
+        </h1>
+        <div className="text-md w-[60%] font-raleway text-[#413e66]">
+          <p className="mb-10">
+            I have 5+ years of professional software development experience
           </p>
-          <p>Experience: 5+ years of professional software development</p>
+          <a className="contact" href="mailto: sarmey47@gmail.com">
+            Contact me
+          </a>
         </div>
       </section>
     </Layout>
