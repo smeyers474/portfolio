@@ -56,3 +56,17 @@
     opacity: 1;
   }
 }
+
+.scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-container div {
+  display: inline-block;
+}
+
+.scroll-container div img {
+  padding: 10px;
+}

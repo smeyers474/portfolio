@@ -1,5 +1,6 @@
 import Layout from "~/components/layout/Layout";
 import Image from "~/components/image/Image";
+import Gallery from "~/components/gallery/Gallery";
 import { useInView } from "react-intersection-observer";
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
           <p className="text-lg text-white md:text-2xl">Software Engineer</p>
         </section>
       </div>
-      <section className="h-screen bg-white"></section>
+      <section><Gallery/></section>
       <section
         ref={refImage}
         className="grid min-h-screen grid-cols-1 items-center justify-center bg-[#f6f5ff] md:grid-cols-2"
