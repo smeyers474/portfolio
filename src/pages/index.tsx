@@ -29,7 +29,9 @@ export default function Home() {
           <p className="text-lg text-white md:text-2xl">Software Engineer</p>
         </section>
       </div>
-      <section><Gallery/></section>
+      <section>
+        <Gallery />
+      </section>
       <section
         ref={refImage}
         className="grid min-h-screen grid-cols-1 items-center justify-center bg-[#f6f5ff] md:grid-cols-2"
