@@ -9,13 +9,13 @@
   background: #413e66;
 }
 
-.contact {
+.button {
   background: #001f3f;
   color: white;
   padding: 10px;
   border-radius: 5px;
 }
-.contact:hover {
+.button:hover {
   background: #413e66;
 }
 
