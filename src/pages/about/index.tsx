@@ -1,5 +1,6 @@
 import Layout from "~/components/layout/Layout";
 import Link from "next/link";
+import Button from "~/components/button/Button";
 
 import { MdOpenInNew } from "react-icons/md";
 
@@ -9,14 +10,16 @@ export default function Page() {
       <section className="font-raleway text-[#413e66]">
         <div className="px-10 pb-10 pt-5">
           <div className="container flex justify-end">
-            <Link
-              className="button flex items-center gap-1 rounded-xl px-3 py-1"
+            <Button
               href="/resume.pdf"
               target="_blank"
-            >
-              Resume
-              <MdOpenInNew />
-            </Link>
+              display={
+                <div className="flex items-center gap-1">
+                  Resume
+                  <MdOpenInNew />
+                </div>
+              }
+            />
           </div>
           <h1 className="pb-5 text-2xl">About</h1>
           <p>

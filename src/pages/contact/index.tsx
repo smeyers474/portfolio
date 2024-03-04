@@ -1,4 +1,5 @@
 import Layout from "~/components/layout/Layout";
+import Button from "~/components/button/Button";
 
 export default function Page() {
   return (
@@ -6,26 +7,21 @@ export default function Page() {
       <div className="py-5 font-raleway text-[#413e66]">
         <section className="p-10">
           <div className="line"></div>
-
           <h1 className="pb-5 text-2xl">Contact Me</h1>
-          <a
-            className="button text-md text-white"
+          <Button
             href="mailto: sarmey47@gmail.com"
-          >
-            sarmey47@gmail.com
-          </a>
+            target={undefined}
+            display="sarmey47@gmail.com"
+          />
         </section>
         <section className="p-10">
           <div className="line"></div>
-
           <h1 className="pb-5 text-2xl">Social Media</h1>
-          <a
-            className="button text-md text-white"
+          <Button
             href="https://www.linkedin.com/in/sarah-meyers-sm/"
             target="_blank"
-          >
-            LinkedIn
-          </a>
+            display="LinkedIn"
+          />
         </section>
       </div>
     </Layout>

@@ -1,4 +1,5 @@
 import Image from "~/components/image/Image";
+import * as Blur from "./Blur";
 import { useState } from "react";
 import { type ReactNode } from "react";
 
@@ -8,22 +9,27 @@ const imageData = [
   {
     src: "/images/plant.jpg",
     alt: "Picture of a plant",
+    blur: Blur.plant,
   },
   {
     src: "/images/cityscape.jpg",
     alt: "Picture of a cityscape",
+    blur: Blur.cityscape,
   },
   {
     src: "/images/cityscapesunrise.jpg",
     alt: "Picture of a cityscape with sunrise shining",
+    blur: Blur.cityscapesunrise,
   },
   {
     src: "/images/succulent.jpg",
     alt: "Picture of a succulent",
+    blur: Blur.succulent,
   },
   {
     src: "/images/sunset.jpg",
     alt: "Picture of a cityscape with sunset shining",
+    blur: Blur.sunset,
   },
 ];
 
@@ -42,6 +48,7 @@ export default function Gallery() {
       <Image
         src={item.src}
         alt={item.alt}
+        blur={item.blur}
         width={photoWidth}
         height={photoHeight}
         key={index}

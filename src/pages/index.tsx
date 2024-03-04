@@ -2,6 +2,7 @@ import Layout from "~/components/layout/Layout";
 import Image from "~/components/image/Image";
 import Gallery from "~/components/gallery/Gallery";
 import { useInView } from "react-intersection-observer";
+import { headshot as headshotBlur } from "~/components/gallery/Blur";
 
 export default function Home() {
   const { ref: refTitle, inView: inViewTitle } = useInView({
@@ -51,6 +52,7 @@ export default function Home() {
             alt="Picture of Sarah Meyers"
             width="25.5rem"
             height="32.25rem"
+            blur={headshotBlur}
           />
         </div>
       </section>
