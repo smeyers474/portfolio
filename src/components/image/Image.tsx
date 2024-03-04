@@ -5,7 +5,7 @@ type Props = {
   alt: string;
   width: string;
   height: string;
-  objectFit?: string;
+  objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
   blur?: string;
 };
 
@@ -23,7 +23,7 @@ export default function Image({
         src={src}
         alt={alt}
         fill
-        objectFit={objectFit}
+        style={{objectFit: objectFit}}
         placeholder={blur ? "blur" : "empty"}
         blurDataURL={blur}
       />
