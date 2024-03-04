@@ -4,6 +4,11 @@ import Gallery from "~/components/gallery/Gallery";
 import { useInView } from "react-intersection-observer";
 import { headshot as headshotBlur } from "~/components/gallery/Blur";
 
+const photoWidth = "25.5rem";
+const photoHeight = "32.25rem";
+const photoWidthSmall = "12.75rem";
+const photoHeightSmall = "16.125rem";
+
 export default function Home() {
   const { ref: refTitle, inView: inViewTitle } = useInView({
     threshold: 0,
@@ -37,7 +42,7 @@ export default function Home() {
         ref={refImage}
         className="grid min-h-screen grid-cols-1 items-center justify-center bg-[#f6f5ff] md:grid-cols-2"
       >
-        <div className="text-md mx-1 font-raleway text-[#001f3f] md:mx-10">
+        <div className="text-md mx-10 font-raleway text-[#001f3f]">
           <div className="line"></div>
           <h1 className="pb-4 text-2xl">About</h1>
           <p>
@@ -46,12 +51,29 @@ export default function Home() {
             professional software development experience.
           </p>
         </div>
-        <div className={`mx-auto md:mr-10 ${inViewImage ? "fade-image" : ""}`}>
+        <div
+          className={`mx-auto mr-10 hidden md:block ${
+            inViewImage ? "fade-image" : ""
+          }`}
+        >
           <Image
             src="/images/headshot.jpg"
             alt="Picture of Sarah Meyers"
-            width="25.5rem"
-            height="32.25rem"
+            width={photoWidth}
+            height={photoHeight}
+            blur={headshotBlur}
+          />
+        </div>
+        <div
+          className={`mx-auto block md:hidden ${
+            inViewImage ? "fade-image" : ""
+          }`}
+        >
+          <Image
+            src="/images/headshot.jpg"
+            alt="Picture of Sarah Meyers"
+            width={photoWidthSmall}
+            height={photoHeightSmall}
             blur={headshotBlur}
           />
         </div>

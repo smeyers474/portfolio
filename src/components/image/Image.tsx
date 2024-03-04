@@ -23,7 +23,7 @@ export default function Image({
         src={src}
         alt={alt}
         fill
-        style={{objectFit: objectFit}}
+        style={{ objectFit: objectFit }}
         placeholder={blur ? "blur" : "empty"}
         blurDataURL={blur}
       />

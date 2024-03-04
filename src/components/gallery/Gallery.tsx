@@ -5,6 +5,8 @@ import { type ReactNode } from "react";
 
 const photoWidth = "37.5rem";
 const photoHeight = "25rem";
+const photoWidthSmall = "18.75rem";
+const photoHeightSmall = "12.5rem";
 const imageData = [
   {
     src: "/images/plant.jpg",
@@ -41,18 +43,34 @@ export default function Gallery() {
     imageDots.push(
       <div
         className="dot mx-1"
+        key={"dot-" + index}
         style={{ backgroundColor: activeIndex === index ? "#413e66" : "#bbb" }}
       ></div>,
     );
     return (
-      <Image
-        src={item.src}
-        alt={item.alt}
-        blur={item.blur}
-        width={photoWidth}
-        height={photoHeight}
-        key={index}
-      />
+      <div key={index}>
+        <Image
+          src={item.src}
+          alt={item.alt}
+          blur={item.blur}
+          width={photoWidth}
+          height={photoHeight}
+        />
+      </div>
+    );
+  });
+
+  const imageItemsSmall = imageData.map((item, index) => {
+    return (
+      <div key={index}>
+        <Image
+          src={item.src}
+          alt={item.alt}
+          blur={item.blur}
+          width={photoWidthSmall}
+          height={photoHeightSmall}
+        />
+      </div>
     );
   });
 
@@ -73,27 +91,54 @@ export default function Gallery() {
   };
 
   return (
-    <div className="scroll-container flex justify-between">
-      <button onClick={moveBackward}>
-        <Image
-          src="/assets/chevron_left_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="chevron left"
-          width="100px"
-          height="100px"
-        ></Image>
-      </button>
-      <div className="flex flex-col items-center">
-        {imageItems[activeIndex]}
-        <div className="mb-1">{imageDots}</div>
+    <div className="scroll-container">
+      <div className="flex justify-center md:justify-between">
+        <button className="hidden md:block" onClick={moveBackward}>
+          <Image
+            src="/assets/chevron_left_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="chevron left"
+            width="100px"
+            height="100px"
+          ></Image>
+        </button>
+        <div className="flex flex-col items-center">
+          <div className="hidden md:block">{imageItems[activeIndex]}</div>
+          <div className="block md:hidden">{imageItemsSmall[activeIndex]}</div>
+          <div className="mb-1">{imageDots}</div>
+        </div>
+        <button className="hidden md:block" onClick={moveForward}>
+          <Image
+            src="/assets/chevron_right_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="chevron right"
+            width="100px"
+            height="100px"
+          ></Image>
+        </button>
       </div>
-      <button onClick={moveForward}>
-        <Image
-          src="/assets/chevron_right_FILL0_wght400_GRAD0_opsz24.svg"
-          alt="chevron right"
-          width="100px"
-          height="100px"
-        ></Image>
-      </button>
+      <div className="flex items-center justify-between md:hidden">
+        <button
+          className="flex w-[50%] justify-center pb-5"
+          onClick={moveBackward}
+        >
+          <Image
+            src="/assets/chevron_left_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="chevron left"
+            width="50px"
+            height="50px"
+          ></Image>
+        </button>
+        <button
+          className="flex w-[50%] justify-center pb-5"
+          onClick={moveForward}
+        >
+          <Image
+            src="/assets/chevron_right_FILL0_wght400_GRAD0_opsz24.svg"
+            alt="chevron right"
+            width="50px"
+            height="50px"
+          ></Image>
+        </button>
+      </div>
     </div>
   );
 }
