@@ -47,7 +47,7 @@
   }
 }
 
-.scroll-container div img {
+.scroll-container .active-image {
   padding-top: 20px;
 }
 

@@ -48,7 +48,7 @@ export default function Gallery() {
       ></div>,
     );
     return (
-      <div key={index}>
+      <div className="active-image" key={index}>
         <Image
           src={item.src}
           alt={item.alt}
@@ -62,7 +62,7 @@ export default function Gallery() {
 
   const imageItemsSmall = imageData.map((item, index) => {
     return (
-      <div key={index}>
+      <div className="active-image" key={index}>
         <Image
           src={item.src}
           alt={item.alt}
