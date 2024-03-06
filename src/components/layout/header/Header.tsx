@@ -23,24 +23,10 @@ export default function Header() {
           </Link>
           <Link
             className="font-raleway text-[#413e66]"
-            href="/resume"
+            href="/contact"
             target="_self"
           >
-            Resume
-          </Link>
-          <Link
-            className="font-raleway text-[#413e66]"
-            href="/photography"
-            target="_self"
-          >
-            Photography
-          </Link>
-          <Link
-            className="font-raleway text-[#413e66]"
-            href="https://www.linkedin.com/in/sarah-meyers-sm/"
-            target="_blank"
-          >
-            LinkedIn
+            Contact
           </Link>
         </div>
       </div>

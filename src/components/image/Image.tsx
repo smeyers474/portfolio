@@ -5,7 +5,8 @@ type Props = {
   alt: string;
   width: string;
   height: string;
-  objectFit?: string;
+  objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
+  blur?: string;
 };
 
 export default function Image({
@@ -14,10 +15,18 @@ export default function Image({
   width,
   height,
   objectFit = "cover",
+  blur = "",
 }: Props) {
   return (
     <div style={{ position: "relative", width: width, height: height }}>
-      <NextImage src={src} alt={alt} fill objectFit={objectFit} />
+      <NextImage
+        src={src}
+        alt={alt}
+        fill
+        style={{ objectFit: objectFit }}
+        placeholder={blur ? "blur" : "empty"}
+        blurDataURL={blur}
+      />
     </div>
   );
 }

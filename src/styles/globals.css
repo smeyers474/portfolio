@@ -4,17 +4,64 @@
 
 .line {
   display: inline-block;
-  width: 5rem;
+  width: 4rem;
   height: 1px;
   background: #413e66;
 }
 
-.contact {
-  background: #001f3f;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
+.fade-title {
+  animation: fadeBackground 3s;
+  animation-fill-mode: forwards;
 }
-.contact:hover {
-  background: #413e66;
+@keyframes fadeBackground {
+  from {
+    background-color: #ebe3f1;
+  }
+  to {
+    background-color: #001f3f;
+  }
+}
+
+.fade-title-text {
+  animation: slide-up 2s;
+}
+@keyframes slide-up {
+  from {
+    margin-top: 10%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+.fade-image {
+  animation: fadeImage 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scroll-container .active-image {
+  padding-top: 20px;
+}
+
+.scroll-container button {
+  margin: 0;
+}
+.scroll-container button:hover {
+  background-color: #f0f0f0;
+}
+
+.scroll-container .dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
