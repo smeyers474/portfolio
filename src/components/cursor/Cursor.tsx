@@ -11,7 +11,8 @@ export default function Cursor() {
     setPosition({ x: e.clientX, y: e.clientY });
     const target = e.target;
     setIsPointer(
-      window.getComputedStyle(target as Element).getPropertyValue("cursor") === "pointer"
+      window.getComputedStyle(target as Element).getPropertyValue("cursor") ===
+        "pointer",
     );
   };
 
@@ -26,14 +27,14 @@ export default function Cursor() {
   const cursorSize = isPointer ? 40 : 20;
 
   return (
-      <div
-        className={`${styles.cursor}`}
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          width: `${cursorSize}px`,
-          height: `${cursorSize}px`
-        }}
-      ></div>
+    <div
+      className={`${styles.cursor}`}
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+        width: `${cursorSize}px`,
+        height: `${cursorSize}px`,
+      }}
+    ></div>
   );
 }
