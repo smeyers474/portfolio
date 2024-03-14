@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  cursor: none;
+}
+
 .line {
   display: inline-block;
   width: 4rem;
