@@ -1,28 +1,34 @@
-# Create T3 App
+# Portfolio Website for Sarah Meyers
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+<p align="center">
+<a href="https://www.sarahmeyers.dev" target="_blank"><img src="public/images/sm-high-resolution-logo-transparent.png" alt="Sarah Meyers Logo" width="200"/></a>
+</p>
 
-## What's next? How do I make an app with this?
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app` used to demonstrate coding ability and design by Sarah Meyers.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Getting Started
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+Developed using the Visual Studio Code editor on a Macbook Pro. Node Package Manager is used to deploy locally, test and format with the following (defined in `package.json`):
+
+`npm run`
+* `build`
+* `dev`
+* `lint`
+* `format`
+* `format:fix`
+
+## Dependencies
 
 - [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
 - [Tailwind CSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-## Learn More
+## Contributing
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Commiting changes to a new branch following the naming format `feat/[feature name]` or `fix/[bug name]`.
+Opening a pull request will automatically deploy a preview with Netlify.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## Deployment
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Using Netlify to deploy the project from Github to the domain [sarahmeyers.dev](https://www.sarahmeyers.dev).
+Commits and merges into the main branch will automatically be deployed.
