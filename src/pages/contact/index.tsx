@@ -16,12 +16,19 @@ export default function Page() {
         </section>
         <section className="p-10">
           <div className="line"></div>
-          <h1 className="pb-5 text-2xl">Social Media</h1>
-          <Button
-            href="https://www.linkedin.com/in/sarah-meyers-sm/"
-            target="_blank"
-            display="LinkedIn"
-          />
+          <h1 className="pb-5 text-2xl">Links</h1>
+          <div className="flex gap-4">
+            <Button
+              href="https://www.linkedin.com/in/sarah-meyers-sm/"
+              target="_blank"
+              display="LinkedIn"
+            />
+            <Button
+              href="https://github.com/smeyers474"
+              target="_blank"
+              display="Github"
+            />
+          </div>
         </section>
       </div>
     </Layout>
