@@ -47,8 +47,7 @@ export default function Home() {
           <h1 className="pb-4 text-2xl">About</h1>
           <p>
             San Diego based software developer who likes to spend her time with
-            hobbies like fashion and video games. I have 5+ years of
-            professional software development experience.
+            hobbies like fashion and video games when she isn't designing and developing full-stack websites.
           </p>
         </div>
         <div
