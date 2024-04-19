@@ -1,9 +1,14 @@
+import { useState } from "react";
+
 import Layout from "~/components/layout/Layout";
 import Button from "~/components/button/Button";
 
-import { MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew,MdExpandMore, MdExpandLess } from "react-icons/md";
 
 export default function Page() {
+  const [expandOne, setExpandOne] = useState(false);
+  const [expandTwo, setExpandTwo] = useState(false);
+
   return (
     <Layout>
       <section className="font-raleway text-[#413e66]">
@@ -45,9 +50,9 @@ export default function Page() {
           <p className="pb-2 text-sm">August 2018 - November 2023</p>
           <h3 className="text-md pb-5 italic">Viasat, Carlsbad, CA - Remote</h3>
           <ul className="experience-list mx-5 list-outside list-disc">
-            <li>
+            <li className={ expandOne ? "expand-less-list" : "expand-more-list"} onClick={() => setExpandOne(!expandOne)}>
               Technical Lead for enterprise data catalog launch
-              <ul className="mx-10 list-outside list-disc">
+              <ul className="mx-10 list-outside list-disc" style={{display: expandOne ? "block" : "none"}}>
                 <li>
                   Created, prioritized, and designated tasks to 3 engineers that
                   made up the progress of the project which met and exceeded
@@ -63,10 +68,10 @@ export default function Page() {
                 </li>
               </ul>
             </li>
-            <li>
+            <li className={ expandTwo ? "expand-less-list" : "expand-more-list"} onClick={() => setExpandTwo(!expandTwo)}>
               Spearheaded the development of an internal data access request web
               application and process
-              <ul className="mx-10 list-outside list-disc">
+              <ul className="mx-10 list-outside list-disc" style={{display: expandTwo ? "block" : "none"}}>
                 <li>
                   Developed a Next.js web application following a Figma design
                   document
