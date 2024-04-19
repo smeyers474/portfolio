@@ -22,9 +22,7 @@ export default function Page() {
           </div>
           <h1 className="pb-5 text-2xl">About</h1>
           <p>
-            San Diego based software developer who likes to spend her time with
-            hobbies like fashion and video games. I have 5+ years of
-            professional software development experience.
+          Creative, open-minded software developer combining 5+ years of broad software engineering expertise with strong leadership and technical skills. Experience ranging from managing existing infrastructure to creating a custom, full-stack website.
           </p>
         </div>
       </section>
