@@ -1,25 +1,10 @@
 import Layout from "~/components/layout/Layout";
-import Button from "~/components/button/Button";
-
-import { MdOpenInNew } from "react-icons/md";
 
 export default function Page() {
   return (
     <Layout>
       <section className="font-raleway text-[#413e66]">
         <div className="px-10 pb-10 pt-5">
-          <div className="container flex justify-end">
-            <Button
-              href="/resume.pdf"
-              target="_blank"
-              display={
-                <div className="flex items-center gap-1">
-                  Resume
-                  <MdOpenInNew />
-                </div>
-              }
-            />
-          </div>
           <h1 className="pb-5 text-2xl">About</h1>
           <p>
           Creative, open-minded software developer combining 5+ years of broad software engineering expertise with strong leadership and technical skills. Experience ranging from managing existing infrastructure to creating a custom, full-stack website.
@@ -70,7 +55,7 @@ export default function Page() {
                   document
                 </li>
                 <li>
-                  Worked with an internal team’s custom ReactJS component
+                  Worked with an internal team&apos;s custom ReactJS component
                   library and brand design guidelines
                 </li>
                 <li>
@@ -106,7 +91,7 @@ export default function Page() {
               surveys
             </li>
             <li>
-              Provided support for my team’s internal tools and services
+              Provided support for my team&apos;s internal tools and services
               including a Kubernetes cluster, a Trino database, JupyterLab,
               Superset, and Apache Airflow
             </li>

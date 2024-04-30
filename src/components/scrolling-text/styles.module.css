@@ -1,0 +1,44 @@
+.container {
+  max-width: 100%;
+}
+
+.text {
+  white-space: nowrap;
+  display: inline-block;
+  -moz-animation: my-animation 10s linear infinite;
+  -webkit-animation: my-animation 10s linear infinite;
+  animation: my-animation 10s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
+
+@keyframes my-animation {
+  0% {
+    -moz-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(-25%, 0, 0);
+    -webkit-transform: translate3d(-25%, 0, 0);
+    transform: translate3d(-25%, 0, 0);
+  }
+}
