@@ -8,7 +8,7 @@ export default function Page() {
     <Layout>
       <section className="font-raleway text-[#413e66]">
         <div className="px-10 pb-10 pt-5">
-          <div className="container flex justify-end">
+          <div className="flex justify-end">
             <Button
               href="/resume.pdf"
               target="_blank"
@@ -22,7 +22,7 @@ export default function Page() {
           </div>
           <h1 className="pb-5 text-2xl">About</h1>
           <p>
-          Creative, open-minded software developer combining 5+ years of broad software engineering expertise with strong leadership and technical skills. Experience ranging from managing existing infrastructure to creating a custom, full-stack website.
+            Pursuing my passion for frontend development, user-centered design, and problem solving with my 6+ years of full-stack and infrastructure experience.
           </p>
         </div>
       </section>
@@ -39,85 +39,53 @@ export default function Page() {
       <section className="font-raleway text-[#413e66]">
         <div className="p-10">
           <h1 className="pb-5 text-2xl">Work Experience</h1>
-          <h2 className="pb-2 text-lg">Software Engineer III</h2>
-          <p className="pb-2 text-sm">August 2018 - November 2023</p>
-          <h3 className="text-md pb-5 italic">Viasat, Carlsbad, CA - Remote</h3>
+          <h2 className="pb-2 text-lg">Acrisure - Software Engineer</h2>
+          <p className="pb-2 text-sm">July 2024 - Present</p>
+          <h3 className="text-md pb-5 italic">San Diego, CA</h3>
           <ul className="experience-list mx-5 list-outside list-disc">
             <li>
-              Technical Lead for enterprise data catalog launch
+              Served as technical lead on a major UX improvement initiative; identified a gap in insurance network accuracy, designed a solution, and led cross-functional implementation
+            </li>
+            <li>
+              Key contributor to a quoting platform supporting 1,000+ monthly users, enabling insurance rate comparisons across 104 carriers in 22 U.S. states
+            </li>
+            <li>
+              Revamped the website login experience by implementing Auth0 best practices and integrating company-wide SSO
+            </li>
+            <li>
+              Troubleshot and enhanced complex systems involving Java APIs, React frontends, MySQL databases, and cloud infrastructure (AWS/GCP)
+            </li>
+            <li>
+              Mentored a junior engineer and coordinated with business stakeholders and third-party vendors to align technical efforts with strategic goals
+            </li>
+          </ul>
+          <br/>
+          <h2 className="pb-2 text-lg">Viasat - Software Engineer</h2>
+          <p className="pb-2 text-sm">August 2018 - November 2023</p>
+          <h3 className="text-md pb-5 italic">Carlsbad, CA - Remote</h3>
+          <ul className="experience-list mx-5 list-outside list-disc">
+            <li>
+              Technical Lead for the launch of an enterprise data catalog; created, prioritized, and delegated tasks, delivering the product ahead of schedule
+            </li>
+            <li>
+              Acted as subject matter expert on the external catalog platform, providing guidance and delivering regular roadmap and feature updates to stakeholders
+            </li>
+            <li>
+              Spearheaded development of an internal data access request platform, eliminating 100+ support emails per month through automation
               <ul className="mx-10 list-outside list-disc">
                 <li>
-                  Created, prioritized, and designated tasks to 3 engineers that
-                  made up the progress of the project which met and exceeded
-                  deadlines for product launch
+                  Built a modern Next.js web app using the company’s React component library and brand guidelines in collaboration with a product designer via Figma
                 </li>
                 <li>
-                  Became subject matter expert on the external data catalog
-                  solution
+                  Designed a secure backend system using a Go REST API and PostgreSQL database
                 </li>
                 <li>
-                  Delivered periodic functionality and roadmap presentations to
-                  stakeholders
+                  Set up CI/CD workflows with GitHub Actions and end-to-end testing with Cypress
                 </li>
               </ul>
             </li>
             <li>
-              Spearheaded the development of an internal data access request web
-              application and process
-              <ul className="mx-10 list-outside list-disc">
-                <li>
-                  Developed a Next.js web application following a Figma design
-                  document
-                </li>
-                <li>
-                  Worked with an internal team’s custom ReactJS component
-                  library and brand design guidelines
-                </li>
-                <li>
-                  Set up a CI/CD pipeline for the project with Github Actions to
-                  ensure Cypress end to end tests pass and provide automatic
-                  deployment
-                </li>
-                <li>
-                  Replaced hundreds of data access request support emails with a
-                  custom website and automatic data access request process
-                </li>
-                <li>
-                  Outlined a plan to redesign the data access request process
-                  replacing the Python GraphQL API and DynamoDB database with a
-                  Go REST API and a PostgreSQL database
-                </li>
-                <li>
-                  Designed the PostgreSQL table formats to store data for
-                  internal customer requests and approvals, prioritizing a
-                  simple, maintainable organization of the complex system
-                </li>
-                <li>
-                  Worked with the legal team to ensure sensitive data is labeled
-                  and approved properly
-                </li>
-              </ul>
-            </li>
-            <li>
-              Conducted user experience research for the internal data catalog
-              and access request process, which provided data to back up
-              prioritizing improvements and new features of future products by
-              identifying user needs and pain points through user interviews and
-              surveys
-            </li>
-            <li>
-              Provided support for my team’s internal tools and services
-              including a Kubernetes cluster, a Trino database, JupyterLab,
-              Superset, and Apache Airflow
-            </li>
-            <li>
-              Managed AWS service deployments and resources using YAML
-              configuration files, Ansible playbooks, and CloudFormation
-            </li>
-            <li>
-              Created and maintained data ETLs using Apache Spark and Scala to
-              load data into S3 from a Kafka data stream and make it accessible
-              in Trino
+              Led UX research through user interviews and surveys to uncover pain points and prioritize feature development based on actual user needs
             </li>
           </ul>
         </div>
