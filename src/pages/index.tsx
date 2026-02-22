@@ -32,7 +32,7 @@ export default function Home() {
           >
             Sarah Meyers
           </h1>
-          <p className="text-lg text-white md:text-2xl">Software Engineer</p>
+          <p className="text-lg text-white md:text-2xl">Senior Full-Stack Software Engineer</p>
         </section>
       </div>
       <section>
