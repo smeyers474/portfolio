@@ -13,39 +13,16 @@ body {
   display: inline-block;
   width: 4rem;
   height: 1px;
-  background: #413e66;
-}
-
-.fade-title {
-  animation: fadeBackground 3s;
-  animation-fill-mode: forwards;
-}
-@keyframes fadeBackground {
-  from {
-    background-color: #ebe3f1;
-  }
-  to {
-    background-color: #001f3f;
-  }
 }
 
 .fade-title-text {
-  animation: slide-up 2s;
+  animation: fadeIn 2s;
 }
-@keyframes slide-up {
-  from {
-    margin-top: 10%;
-  }
-  to {
-    margin-top: 0%;
-  }
-}
-
 .fade-image {
-  animation: fadeImage 2s;
+  animation: fadeIn 2s;
   animation-fill-mode: forwards;
 }
-@keyframes fadeImage {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -62,13 +39,13 @@ body {
   margin: 0;
 }
 .scroll-container button:hover {
-  background-color: #f0f0f0;
+  cursor: pointer;
+
 }
 
 .scroll-container .dot {
   height: 10px;
   width: 10px;
-  background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
 }

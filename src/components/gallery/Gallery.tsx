@@ -42,9 +42,10 @@ export default function Gallery() {
   const imageItems = imageData.map((item, index) => {
     imageDots.push(
       <div
-        className="dot mx-1"
+        className={`dot mx-1 ${
+          activeIndex === index ? "bg-neutral-800" : "bg-neutral-400"
+        }`}
         key={"dot-" + index}
-        style={{ backgroundColor: activeIndex === index ? "#413e66" : "#bbb" }}
       ></div>,
     );
     return (
@@ -91,7 +92,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="scroll-container">
+    <div className="scroll-container bg-neutral-50">
       <div className="flex justify-center md:justify-between">
         <button className="hidden md:block" onClick={moveBackward}>
           <Image
