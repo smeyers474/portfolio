@@ -8,6 +8,11 @@
 body {
   cursor: none;
 }
+@media screen and (max-width: 768px) {
+  body {
+    cursor: default;
+  }
+}
 
 .line {
   display: inline-block;

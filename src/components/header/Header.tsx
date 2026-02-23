@@ -5,7 +5,7 @@ import { MdOpenInNew } from "react-icons/md";
 export default function Header() {
   return (
     <header>
-      <div className="mx-auto flex max-w-screen-2xl justify-center px-10 py-4 gap-10">
+      <div className="mx-auto flex max-w-screen-2xl justify-center px-10 py-4 md:gap-10">
         <Button
           variant="tertiary"
           href="mailto: sarmey47@gmail.com"

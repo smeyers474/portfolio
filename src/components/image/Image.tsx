@@ -7,6 +7,7 @@ type Props = {
   height: string;
   objectFit?: "fill" | "contain" | "cover" | "none" | "scale-down";
   blur?: string;
+  preload?: boolean;
 };
 
 export default function Image({
@@ -16,6 +17,7 @@ export default function Image({
   height,
   objectFit = "cover",
   blur = "",
+  preload = false,
 }: Props) {
   return (
     <div style={{ position: "relative", width: width, height: height }}>
@@ -26,6 +28,7 @@ export default function Image({
         style={{ objectFit: objectFit }}
         placeholder={blur ? "blur" : "empty"}
         blurDataURL={blur}
+        preload={preload}
       />
     </div>
   );

@@ -15,6 +15,8 @@
 /* Remove this custom cursor in mobile devices */
 @media screen and (max-width: 768px) {
   .cursor {
+    border: none;
+    backdrop-filter: none;
     width: 0;
     height: 0;
     transition:

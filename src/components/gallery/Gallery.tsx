@@ -3,6 +3,8 @@ import * as Blur from "./Blur";
 import { useState } from "react";
 import { type ReactNode } from "react";
 
+import { MdArrowLeft, MdArrowRight } from "react-icons/md";
+
 const photoWidth = "37.5rem";
 const photoHeight = "25rem";
 const photoWidthSmall = "18.75rem";
@@ -92,52 +94,32 @@ export default function Gallery() {
   };
 
   return (
-    <div className="scroll-container bg-neutral-50">
-      <div className="flex justify-center md:justify-between">
-        <button className="hidden md:block" onClick={moveBackward}>
-          <Image
-            src="/assets/chevron_left_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="chevron left"
-            width="100px"
-            height="100px"
-          ></Image>
+    <div className="scroll-container">
+      <div className="flex items-center justify-center md:justify-between gap-10">
+        <button className="hidden md:block bg-neutral-50 rounded-full" onClick={moveBackward}>
+          <MdArrowLeft size={"5em"} color="#0a0a0a" />
         </button>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center px-1 bg-neutral-50 rounded-lg">
           <div className="hidden md:block">{imageItems[activeIndex]}</div>
           <div className="block md:hidden">{imageItemsSmall[activeIndex]}</div>
           <div className="mb-1">{imageDots}</div>
         </div>
-        <button className="hidden md:block" onClick={moveForward}>
-          <Image
-            src="/assets/chevron_right_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="chevron right"
-            width="100px"
-            height="100px"
-          ></Image>
+        <button className="hidden md:block bg-neutral-50 rounded-full" onClick={moveForward}>
+          <MdArrowRight size={"5em"} color="#0a0a0a" />
         </button>
       </div>
-      <div className="flex items-center justify-between md:hidden">
+      <div className="flex items-center justify-center md:hidden gap-5 mt-5">
         <button
-          className="flex w-[50%] justify-center pb-5"
+          className="bg-neutral-50 rounded-full"
           onClick={moveBackward}
         >
-          <Image
-            src="/assets/chevron_left_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="chevron left"
-            width="50px"
-            height="50px"
-          ></Image>
+          <MdArrowLeft size={"5em"} color="#0a0a0a" />
         </button>
         <button
-          className="flex w-[50%] justify-center pb-5"
+          className="bg-neutral-50 rounded-full"
           onClick={moveForward}
         >
-          <Image
-            src="/assets/chevron_right_FILL0_wght400_GRAD0_opsz24.svg"
-            alt="chevron right"
-            width="50px"
-            height="50px"
-          ></Image>
+          <MdArrowRight size={"5em"} color="#0a0a0a" />
         </button>
       </div>
     </div>
