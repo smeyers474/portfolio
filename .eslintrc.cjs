@@ -1,5 +1,5 @@
 /** @type {import("eslint").Linter.Config} */
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
+import typescriptEslint from "@typescript-eslint/eslint-plugin";
 
 const config = {
   parser: "@typescript-eslint/parser",
