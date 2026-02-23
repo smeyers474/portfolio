@@ -11,11 +11,12 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 Developed using the Visual Studio Code editor on a Macbook Pro. Node Package Manager is used to deploy locally, test and format with the following (defined in `package.json`):
 
 `npm run`
-* `build`
-* `dev`
-* `lint`
-* `format`
-* `format:fix`
+
+- `build`
+- `dev`
+- `lint`
+- `format`
+- `format:fix`
 
 ## Dependencies
 

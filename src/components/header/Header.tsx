@@ -17,7 +17,7 @@ export default function Header() {
           href="https://www.linkedin.com/in/sarah-meyers-sm/"
           target="_blank"
           display="LinkedIn"
-          />
+        />
         <Button
           variant="tertiary"
           href="https://github.com/smeyers474"

@@ -15,11 +15,14 @@ export default function Home() {
     threshold: 0,
   });
   return (
-    <main className="h-dvh flex flex-col overflow-hidden bg-neutral-950">
-      <Cursor/>
-      <Header/>
-      <div className="flex-1 overflow-y-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] h-[calc(100vh-theme(spacing.16))]">
-        <section  ref={refTitle} className="h-full text-neutral-50 flex flex-col items-center justify-center text-center font-raleway">
+    <main className="flex h-dvh flex-col overflow-hidden bg-neutral-950">
+      <Cursor />
+      <Header />
+      <div className="h-[calc(100vh-theme(spacing.16))] flex-1 overflow-y-scroll [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <section
+          ref={refTitle}
+          className="font-raleway flex h-full flex-col items-center justify-center text-center text-neutral-50"
+        >
           <h1
             className={`pb-10 text-7xl text-neutral-50 md:text-9xl ${
               inViewTitle ? "fade-title-text" : ""
@@ -27,21 +30,24 @@ export default function Home() {
           >
             Sarah Meyers
           </h1>
-          <p className="text-lg text-neutral-50 md:text-2xl">Senior Full-Stack Software Engineer</p>
+          <p className="text-lg text-neutral-50 md:text-2xl">
+            Senior Full-Stack Software Engineer
+          </p>
         </section>
-        <section className="h-full flex items-center justify-center text-neutral-50">
-          <div className="w-full md:w-4/5 grid grid-cols-1 justify-center items-center md:grid-cols-2">
-            <div className="text-md mx-5 md:mx-10 font-raleway text-neutral-50">
-              <p className="p-5 mb-5 bg-neutral-900 rounded-xl">
-                San Diego based software developer who likes to spend her time with
-                hobbies like fashion and travel.
+        <section className="flex h-full items-center justify-center text-neutral-50">
+          <div className="grid w-full grid-cols-1 items-center justify-center md:w-4/5 md:grid-cols-2">
+            <div className="text-md font-raleway mx-5 text-neutral-50 md:mx-10">
+              <p className="mb-5 rounded-xl bg-neutral-900 p-5">
+                San Diego based software developer who likes to spend her time
+                with hobbies like fashion and travel.
               </p>
-              <p className="p-5 mb-5 bg-neutral-900 rounded-xl">
-                Pursuing my passion for frontend development, user-centered design, and problem solving, leveraging my 7+ years of full-stack experience.
+              <p className="mb-5 rounded-xl bg-neutral-900 p-5">
+                Pursuing my passion for frontend development, user-centered
+                design, and problem solving, leveraging my 7+ years of
+                full-stack experience.
               </p>
             </div>
-            <div
-              className="relative mx-auto mr-10 overflow-hidden rounded-full hidden md:block">
+            <div className="relative mx-auto mr-10 hidden overflow-hidden rounded-full md:block">
               <Image
                 src="/images/photo.jpg"
                 alt="Picture of Sarah Meyers"
@@ -50,8 +56,7 @@ export default function Home() {
                 preload={true}
               />
             </div>
-            <div
-              className="relative mx-auto overflow-hidden rounded-full block md:hidden">
+            <div className="relative mx-auto block overflow-hidden rounded-full md:hidden">
               <Image
                 src="/images/photo.jpg"
                 alt="Picture of Sarah Meyers"
@@ -62,27 +67,32 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="m-5 mb-10 md:m-10 flex flex-col items-center justify-center text-neutral-50 font-raleway">
+        <section className="font-raleway m-5 mb-10 flex flex-col items-center justify-center text-neutral-50 md:m-10">
           <h1 className="mb-10 text-4xl">Experience</h1>
-          <div className="w-full md:w-4/5 p-5 mb-5 bg-neutral-900 rounded-xl">
-            <h2 className="pb-2 text-lg">Acrisure - Senior Software Engineer</h2>
+          <div className="mb-5 w-full rounded-xl bg-neutral-900 p-5 md:w-4/5">
+            <h2 className="pb-2 text-lg">
+              Acrisure - Senior Software Engineer
+            </h2>
             <p className="pb-2 text-sm">July 2024 - Present</p>
             <h3 className="text-md pb-5 italic">San Diego, CA</h3>
             <ul className="mx-5 list-outside list-disc">
               <li>
-                Technical lead for multiple full-stack projects, ensuring on-time delivery through cross-functional collaboration with product and design teams, proactive stakeholder communication, and mentorship of junior engineers.
+                Technical lead for multiple full-stack projects, ensuring
+                on-time delivery through cross-functional collaboration with
+                product and design teams, proactive stakeholder communication,
+                and mentorship of junior engineers.
               </li>
             </ul>
           </div>
-          <div className="w-full md:w-4/5 p-5 bg-neutral-900 rounded-xl">
+          <div className="w-full rounded-xl bg-neutral-900 p-5 md:w-4/5">
             <h2 className="pb-2 text-lg">Viasat - Software Engineer III</h2>
             <p className="pb-2 text-sm">August 2018 - November 2023</p>
             <h3 className="text-md italic">Carlsbad, CA - Remote</h3>
           </div>
         </section>
-        <section className="m-5 md:m-10 flex flex-col items-center justify-center text-neutral-50 font-raleway">
+        <section className="font-raleway m-5 flex flex-col items-center justify-center text-neutral-50 md:m-10">
           <h1 className="mb-10 text-4xl">Education</h1>
-          <div className="w-full md:w-4/5 p-5 bg-neutral-900 rounded-xl">
+          <div className="w-full rounded-xl bg-neutral-900 p-5 md:w-4/5">
             <h2 className="pb-2 text-lg">B.S. in Computer Science</h2>
             <p className="pb-2 text-sm">December 2017</p>
             <h3 className="text-md italic">
@@ -90,7 +100,7 @@ export default function Home() {
             </h3>
           </div>
         </section>
-        <section className="h-full flex flex-col items-center justify-center text-neutral-50">
+        <section className="flex h-full flex-col items-center justify-center text-neutral-50">
           <Gallery />
         </section>
       </div>

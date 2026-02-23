@@ -4,6 +4,7 @@ import { useState } from "react";
 import { type ReactNode } from "react";
 
 import { MdArrowLeft, MdArrowRight } from "react-icons/md";
+import styles from "./styles.module.css";
 
 const photoWidth = "37.5rem";
 const photoHeight = "25rem";
@@ -44,14 +45,14 @@ export default function Gallery() {
   const imageItems = imageData.map((item, index) => {
     imageDots.push(
       <div
-        className={`dot mx-1 ${
+        className={`${styles.dot} mx-1 ${
           activeIndex === index ? "bg-neutral-800" : "bg-neutral-400"
         }`}
         key={"dot-" + index}
       ></div>,
     );
     return (
-      <div className="active-image" key={index}>
+      <div className={`${styles.photo}`} key={index}>
         <Image
           src={item.src}
           alt={item.alt}
@@ -65,7 +66,7 @@ export default function Gallery() {
 
   const imageItemsSmall = imageData.map((item, index) => {
     return (
-      <div className="active-image" key={index}>
+      <div className={`${styles.photo}`} key={index}>
         <Image
           src={item.src}
           alt={item.alt}
@@ -94,31 +95,31 @@ export default function Gallery() {
   };
 
   return (
-    <div className="scroll-container">
-      <div className="flex items-center justify-center md:justify-between gap-10">
-        <button className="hidden md:block bg-neutral-50 rounded-full" onClick={moveBackward}>
-          <MdArrowLeft size={"5em"} color="#0a0a0a" />
-        </button>
-        <div className="flex flex-col items-center px-1 bg-neutral-50 rounded-lg">
-          <div className="hidden md:block">{imageItems[activeIndex]}</div>
-          <div className="block md:hidden">{imageItemsSmall[activeIndex]}</div>
-          <div className="mb-1">{imageDots}</div>
-        </div>
-        <button className="hidden md:block bg-neutral-50 rounded-full" onClick={moveForward}>
-          <MdArrowRight size={"5em"} color="#0a0a0a" />
-        </button>
-      </div>
-      <div className="flex items-center justify-center md:hidden gap-5 mt-5">
+    <div className={`${styles.gallery}`}>
+      <div className="flex items-center justify-center gap-10 md:justify-between">
         <button
-          className="bg-neutral-50 rounded-full"
+          className="hidden rounded-full bg-neutral-50 md:block"
           onClick={moveBackward}
         >
           <MdArrowLeft size={"5em"} color="#0a0a0a" />
         </button>
+        <div className="flex flex-col items-center rounded-lg bg-neutral-50 px-1">
+          <div className="hidden md:block">{imageItems[activeIndex]}</div>
+          <div className="block md:hidden">{imageItemsSmall[activeIndex]}</div>
+          <div className="mb-1">{imageDots}</div>
+        </div>
         <button
-          className="bg-neutral-50 rounded-full"
+          className="hidden rounded-full bg-neutral-50 md:block"
           onClick={moveForward}
         >
+          <MdArrowRight size={"5em"} color="#0a0a0a" />
+        </button>
+      </div>
+      <div className="mt-5 flex items-center justify-center gap-5 md:hidden">
+        <button className="rounded-full bg-neutral-50" onClick={moveBackward}>
+          <MdArrowLeft size={"5em"} color="#0a0a0a" />
+        </button>
+        <button className="rounded-full bg-neutral-50" onClick={moveForward}>
           <MdArrowRight size={"5em"} color="#0a0a0a" />
         </button>
       </div>

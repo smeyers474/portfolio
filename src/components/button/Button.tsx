@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { HTMLAttributeAnchorTarget, ReactNode } from "react";
 
-type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
+type ButtonVariant = "primary" | "secondary" | "tertiary";
 
 type Props = {
   variant?: ButtonVariant; // Optional prop, defaults to primary
@@ -10,31 +10,35 @@ type Props = {
   target: HTMLAttributeAnchorTarget | undefined;
 };
 
-export default function Button({ variant = 'primary', display, href, target }: Props) {
+export default function Button({
+  variant = "primary",
+  display,
+  href,
+  target,
+}: Props) {
   const getClassName = (variant: ButtonVariant) => {
-    const primaryClass = 'rounded-lg bg-[#001f3f] p-3 text-white hover:bg-[#413e66]';
-    const secondaryClass = 'rounded-lg bg-neutral-950 p-3 text-neutral-50 hover:bg-neutral-900';
-    const tertiaryClass = 'rounded-lg bg-transparent p-3 text-neutral-50 hover:bg-transparent';
+    const primaryClass =
+      "rounded-lg bg-neutral-50 p-3 text-neutral-950 hover:neutral-100";
+    const secondaryClass =
+      "rounded-lg bg-neutral-950 p-3 text-neutral-50 hover:bg-neutral-900";
+    const tertiaryClass =
+      "rounded-lg bg-transparent p-3 text-neutral-50 hover:bg-transparent";
 
     switch (variant) {
-      case 'primary':
+      case "primary":
         return primaryClass;
-      case 'secondary':
+      case "secondary":
         return secondaryClass;
-      case 'tertiary':
+      case "tertiary":
         return tertiaryClass;
       default:
         // Handles unexpected values and ensures type safety
         return primaryClass;
     }
-  }
+  };
   const className = getClassName(variant);
   return (
-    <Link
-      className={className}
-      href={href}
-      target={target}
-    >
+    <Link className={className} href={href} target={target}>
       {display}
     </Link>
   );
