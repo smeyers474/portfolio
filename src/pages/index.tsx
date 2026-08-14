@@ -43,7 +43,7 @@ export default function Home() {
               </p>
               <p className="mb-5 rounded-xl bg-neutral-900 p-5">
                 Pursuing my passion for frontend development, user-centered
-                design, and problem solving, leveraging my 7+ years of
+                design, and problem solving, leveraging my
                 full-stack experience.
               </p>
             </div>
